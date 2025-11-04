@@ -6,7 +6,7 @@ export const cardData = {
   phone: "+373 68740001",
   telephone: "",
   location: "Băcioi, Chișinău, Moldova",
-  address: "Bacău, Chișinău, Moldova",
+  address: "Băcioi, Chișinău, Moldova",
   image: "https://images.unsplash.com/photo-1497384401032-2182d2687715?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxMjA3fDB8MXxzZWFyY2h8Mnx8bWluaW1hbGlzdCUyMHdhbGxwYXBlcnx8MHx8fHwxNjI5MzE3MzUx&ixlib=rb-1.2.1&q=80&w=1080",
   logo: "/ss.webp",
   logo2: "", 
