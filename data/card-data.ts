@@ -1,31 +1,32 @@
 export const cardData = {
-  name: "Gyan Prakash Rungta",
-  company: "Spartan Hazel Enterprises Pvt Ltd",
-  title: "Managing Director",
-  email: "hr@ushaswitches.in",
-  phone: "+91 7080709006",
-  telephone: "0120-3587473",
-  location: "Noida, UP",
-  address: "B-26, First Floor, Office No. 04, Sector 02, Noida, UP - 201301, India",
-  image: "/sh-goup-logo.jpeg",
-  logo: "/usha-logo.jpeg",
+  name: "Elena Sîli",
+  company: "",
+  title: "Professional Translator & Interpreter",
+  email: "elenasili566@gmail.com",
+  phone: "+373 68740001",
+  telephone: "",
+  location: "Bacău, Chișinău, Moldova",
+  address: "Bacău, Chișinău, Moldova",
+  image: "https://images.unsplash.com/photo-1497384401032-2182d2687715?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxMjA3fDB8MXxzZWFyY2h8Mnx8bWluaW1hbGlzdCUyMHdhbGxwYXBlcnx8MHx8fHwxNjI5MzE3MzUx&ixlib=rb-1.2.1&q=80&w=1080",
+  logo: "/ss.webp",
   logo2: "", 
-  tagline: "Brand Licensee of USHA SHRIRAM ENTERPRISES PVT LTD",
+  tagline: "",
   social: {
-    email: "hr@ushaswitches.in",
-    facebook: "",
-    instagram: "",
-    linkedin: "",
+    email: "elenasili566@gmail.com",
+    facebook: "https://www.facebook.com/elena.sili.58",
+    instagram: "https://www.instagram.com/elsoreil",
+    linkedin: "https://www.linkedin.com/in/sili-elena-9368aa68",
     twitter: "",
-    website: "https://ushaswitches.in/",
-    whatsapp: "",
+    website: "https://elena.iprofile.online",
+    whatsapp: "https://wa.me/37368740001",
+    telegram: "https://t.me/sorreil",
   },
 }
 
 export const cardHelpers = {
   getFormattedPhone: (phone: string) => {
     const cleaned = phone.replace(/\D/g, "")
-    return cleaned.startsWith("91") ? `+${cleaned}` : `+91${cleaned}`
+    return cleaned.startsWith("373") ? `+${cleaned}` : phone
   },
 
   getTelLink: (phone: string) => {
@@ -38,7 +39,7 @@ export const cardHelpers = {
 
   getWhatsAppLink: (phone: string) => {
     const cleaned = phone.replace(/\D/g, "")
-    const withCountryCode = cleaned.startsWith("91") ? cleaned : `91${cleaned}`
+    const withCountryCode = cleaned.startsWith("373") ? cleaned : `373${cleaned}`
     return `https://wa.me/${withCountryCode}`
   },
 
@@ -47,7 +48,7 @@ export const cardHelpers = {
   },
 
   getSocialLinks: () => {
-    const links: Array<{ name: string; url: string; icon: "email" | "facebook" | "instagram" | "linkedin" | "twitter" | "website" | "whatsapp" }> = []
+    const links: Array<{ name: string; url: string; icon: "email" | "facebook" | "instagram" | "linkedin" | "twitter" | "website" | "whatsapp" | "telegram" }> = []
     
     if (cardData.social.email) {
       links.push({ 
@@ -71,6 +72,9 @@ export const cardHelpers = {
     if (cardData.social.website) {
       links.push({ name: "Website", url: cardData.social.website, icon: "website" })
     }
+    if (cardData.social.telegram) {
+      links.push({ name: "Telegram", url: cardData.social.telegram, icon: "telegram" })
+    }
     if (cardData.social.whatsapp || cardData.phone) {
       links.push({ 
         name: "WhatsApp", 
@@ -83,10 +87,6 @@ export const cardHelpers = {
   },
 
   getDisplayPhone: (phone: string) => {
-    const cleaned = phone.replace(/\D/g, "")
-    if (cleaned.length === 10) {
-      return cleaned.replace(/(\d{5})(\d{5})/, "$1 $2")
-    }
     return phone
   },
 

@@ -27,17 +27,17 @@ export default function ProfileHeader({
         <img
           src={image}
           alt={name}
-          className="w-full aspect-video sm:aspect-21/9 p-4 bg-white object-cover rounded-t-xl shadow-2xl border-b-4 border-primary"
+          className="w-full aspect-video sm:aspect-21/9 object-cover rounded-t-xl shadow-2xl border-b-4 border-primary"
         />
         
         
         {logo && (
           <div className="absolute bottom-2 right-6 sm:right-10 lg:right-12 transform translate-y-1/2 z-20">
-            <div className="p-1 bg-white rounded-xs shadow hover:shadow-xl transition-shadow">
+            <div className="">
               <img
                 src={logo}
                 alt="Company Logo"
-                className="h-12 sm:h-16 lg:h-20 w-auto object-contain"
+                className="h-16 sm:h-20 lg:h-24 rounded-full w-auto object-contain shadow hover:shadow-xl transition-shadow"
               />
             </div>
           </div>
@@ -49,13 +49,13 @@ export default function ProfileHeader({
           {name}
         </h1>
         <p className="text-sm sm:text-base font-medium opacity-75 tracking-wide mb-2">{title}</p>
-        <a
+        {/* <a
           href={phoneHref}
           className="inline-flex items-center gap-1 hover:opacity-70 transition-opacity"
         >
           <BsFillTelephoneFill className="text-base sm:text-lg" />
           <span className="text-sm sm:text-base font-medium">{phone}</span>
-        </a>
+        </a> */}
       </div>
     </div>
   );

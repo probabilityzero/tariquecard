@@ -8,6 +8,7 @@ import CompanyInfo from "@/components/CompanyInfo"
 import SocialLinks from "@/components/SocialLinks"
 import Tagline from "@/components/Tagline"
 import Divider from "@/components/Divider"
+import ContactInfo from "@/components/ContactInfo"
 
 const ENABLE_THEME_TOGGLE = process.env.NEXT_PUBLIC_ENABLE_THEME_TOGGLE === 'true'
 const DEFAULT_THEME = process.env.NEXT_PUBLIC_DEFAULT_THEME || 'light'
@@ -125,6 +126,14 @@ END:VCARD`
               image={cardData.image}
               logo={cardData.logo}
               className="mb-10"
+            />
+
+            <ContactInfo
+              email={cardData.email}
+              phone={cardHelpers.getDisplayPhone(cardData.phone)}
+              telephone={cardHelpers.getDisplayTelephone(cardData.telephone)}
+              address={cardData.address}
+              className="mb-6"
             />
 
             {cardData.company && (

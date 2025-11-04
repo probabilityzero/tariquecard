@@ -1,4 +1,4 @@
-import { FaLinkedin, FaTwitter, FaInstagram, FaFacebook, FaWhatsapp, FaEnvelope, FaGlobe } from "react-icons/fa"
+import { FaLinkedin, FaTwitter, FaInstagram, FaFacebook, FaWhatsapp, FaEnvelope, FaGlobe, FaTelegram } from "react-icons/fa"
 
 const socialConfig = {
   email: { 
@@ -42,6 +42,12 @@ const socialConfig = {
     color: "from-[#25D366] to-[#1da851]",
     hoverBg: "hover:bg-[#25D366]/10",
     hoverBorder: "hover:border-[#25D366]/30"
+  },
+  telegram: { 
+    icon: FaTelegram, 
+    color: "from-[#0088cc] to-[#006699]",
+    hoverBg: "hover:bg-[#0088cc]/10",
+    hoverBorder: "hover:border-[#0088cc]/30"
   },
 }
 
